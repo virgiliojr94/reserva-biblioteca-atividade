@@ -89,3 +89,66 @@ setLista((atual) =>
 | 3 — props e children | Capítulo 3 | https://pt-br.react.dev/learn/passing-props-to-a-component |
 | 4 — estado | Capítulo 4 | https://pt-br.react.dev/learn/state-a-components-memory |
 | 5 — formulários | Capítulo 5 | https://pt-br.react.dev/learn/responding-to-events |
+
+---
+
+## Apoio para a Parte 2
+
+### Ordem dos embrulhos
+
+```text
+BrowserRouter    ← quem olha a URL
+  BooksProvider    ← quem guarda os livros
+    App              ← a aplicação
+```
+
+Quem **fornece** fica sempre acima de quem **usa**.
+
+### Fixo fora, variável dentro
+
+```jsx
+<div className="app-shell">
+  <header>...</header>      {/* fixo: aparece em todas as páginas */}
+
+  <main>
+    <Routes>                 {/* variável: só isto troca */}
+      ...
+    </Routes>
+  </main>
+</div>
+```
+
+### Link × `<a href>`
+
+```jsx
+<Link to="/novo">Novo livro</Link>   // ✅ navega pelo roteador
+<a href="/novo">Novo livro</a>        // ❌ recarrega a aplicação inteira
+```
+
+`<a href>` continua correto para links que apontam **para fora** da sua aplicação.
+
+### Inicialização preguiçosa do estado
+
+```jsx
+useState(loadBooks())   // ❌ executa em toda renderização
+useState(loadBooks)     // ✅ o React executa uma vez só
+```
+
+### Erros mais comuns da Parte 2
+
+| Sintoma | Primeira verificação |
+|---|---|
+| `useNavigate`/`useLocation` fora do Router | falta `BrowserRouter` no `main.jsx` |
+| `No routes matched location` | o `path` bate com a URL? |
+| todos os links aparecem ativos | falta `end` no `NavLink` da raiz |
+| a página recarrega inteira ao navegar | tem `<a href>` no lugar de `Link` |
+| `Cannot destructure property ... of null` | o componente está fora do `BooksProvider` |
+| import não encontrado | o pacote é `react-router` ou `react-router-dom`? Siga o `package.json` |
+
+### Onde estudar cada etapa
+
+| Etapa | Apostila | Documentação |
+|---|---|---|
+| 6 — persistência | Capítulo 6 | https://pt-br.react.dev/learn/synchronizing-with-effects |
+| 7 — contexto | Capítulo 7 | https://pt-br.react.dev/learn/passing-data-deeply-with-context |
+| 8 — rotas | Capítulo 8 | https://reactrouter.com/start/declarative/routing |

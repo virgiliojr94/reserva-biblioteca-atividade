@@ -46,3 +46,13 @@ Confira antes de enviar o link do seu repositório.
 - [ ] `node_modules` **não** foi enviado
 - [ ] o repositório está público
 - [ ] o link foi entregue da forma combinada em sala
+
+---
+
+## Parte 2 — Persistência, Contexto e Rotas
+
+O checklist da Parte 2 está no próprio arquivo
+[ATIVIDADE-2-ROTAS.md](./ATIVIDADE-2-ROTAS.md), na seção "Checklist final".
+
+Ao concluir, **atualize o seu comentário** na issue de entregas informando
+até qual etapa você chegou.

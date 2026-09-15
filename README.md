@@ -6,6 +6,16 @@ Professor: Esp. Virgílio do Rego Monteiro Borges Junior
 
 ---
 
+> ### 📌 Parte 2 disponível
+>
+> Depois de concluir as Etapas 1 a 5 deste arquivo, siga para a
+> **[Parte 2 — Persistência, Contexto e Rotas](./ATIVIDADE-2-ROTAS.md)**.
+>
+> A Parte 2 é feita **no mesmo repositório** que você criou a partir deste template.
+> Você não precisa criar outro repositório nem copiar arquivo nenhum.
+
+---
+
 ## O que é esta atividade
 
 Você vai construir uma pequena aplicação de **reserva de livros de biblioteca**, usando **apenas** o que foi visto nas Aulas 1 a 5.
